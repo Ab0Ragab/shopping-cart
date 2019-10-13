@@ -1,0 +1,35 @@
+<h2>Shopping Cart</h2>
+<p>
+  <a routerLink="/shipping">Shipping Prices</a>
+</p>
+<p>Total price is {{ totalPrice }}$</p>
+<button  
+  *ngIf="this.cartService.count > 0" 
+  class="btn btn-primary" 
+  routerLink="/check-out">CheckOut</button>
+  
+<div class="row">
+    <div class="col-sm-4" *ngFor="let item of items; let i=index">
+        <div class="card text-center" style="width: 18rem; margin-bottom: 20px;">
+            <div class="card-body">
+                <img [src]="item.img" alt="" width="180px;" height="250px" class="img-responsive">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <p class="card-text">{{ item.price | currency }}</p>
+                <i class="fa fa-trash fa-3x" (click)="onDelete(i)"></i>
+            </div>
+            <div class="card-footer">
+              <div class="row no-gutters">
+                <div class="col-2">
+                  <i class="fa fa-minus-square fa-2x" (click)="ondecrease(i)"></i>
+                </div>
+                <div class="col text-center a">
+                  <p class="card-text">{{ item.quantity }}</p> in cart
+                </div>
+                <div class="col-2">
+                  <i class="fa fa-plus-square fa-2x" (click)="onIncrease(i)"></i>
+                </div>
+              </div>
+            </div>
+        </div>     
+    </div>
+</div>

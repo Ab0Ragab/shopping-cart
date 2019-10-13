@@ -1,0 +1,12 @@
+<nav class="navbar navbar-light bg-light">
+        <form class="form-inline">
+          <button class="btn btn-outline-success" type="button" routerLink="/">MobileStore</button>
+          <button class="btn btn-sm btn-outline-secondary" type="button" routerLink="/cart">
+            <i class="fa fa-shopping-cart fa-lg"></i> CheckOut 
+            <span class="badge badge-dark">{{this.cartService.count}}</span>
+          </button>
+        </form>
+
+        <button class="btn btn-primary" routerLink="/auth" *ngIf="!isAuthenticated">Register</button>
+        <button class="btn btn-primary" *ngIf="isAuthenticated" (click)="onLogOut()">Logout</button>
+</nav>

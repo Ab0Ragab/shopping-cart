@@ -1,0 +1,38 @@
+h2
+{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.btn
+{
+    margin-top: 15px;
+}
+.fa-trash
+{
+    color: red;
+}
+.fa-trash:hover
+{
+    color: darkred;
+    cursor: pointer;
+}
+.btn-primary
+{
+    margin-bottom: 20px;
+}
+.fa-minus-square
+{
+    color:red;
+}
+.fa-minus-square:hover{
+    cursor: pointer;
+    color: sienna;
+}
+.fa-plus-square
+{
+    color: blue;
+}
+.fa-plus-square:hover{
+    cursor: pointer;
+    color: blueviolet;
+}

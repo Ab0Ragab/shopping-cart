@@ -1,0 +1,13 @@
+<h2 class="text-center">Product Details</h2>
+
+<div class="row justify-content-center">
+  <div *ngIf="selectedProduct" class="text-center">
+    <img [src]="selectedProduct.img" alt="" class="img-responsive">
+    <h3>{{ selectedProduct.name }}</h3>
+    <h4>{{ selectedProduct.price | currency }}</h4>
+    <p>{{ selectedProduct.description }}</p>
+  
+    <button *ngIf="!addProduct" class="btn btn-success" (click)="addToCart(selectedProduct)">Buy</button>
+    <div *ngIf="addProduct" class="alert alert-primary">Your product has been added to the cart!</div>
+  </div>  
+</div>
